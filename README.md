@@ -9,11 +9,13 @@ Powered via your VGA port, or any USB-C cable. Or both; USB cannot backfeed VGA.
 Built after Gambaman’s game-changing [Ultimate VGA to Scart Adapter](https://hackaday.io/project/165634-the-ultimate-vga-to-scart-adapter). I got carried away. Code by Claude, and, yes, I am embarrassed. All free and open-source, but who doesn't like seeing their name in print? :)
 
 ## Primary features
-* Monitor sync protection at 15kHz and/or 25kHz and/or 31kHz.
+* Monitor sync protection at 15kHz and/or 25kHz and/or 31kHz. You can choose.
 * VGA (TTL) only (Windows, Linux, MiSTer, HDMI-to-VGA dongles.)
 * EDID can be turned on/off, or adjusted.
-* H-pos, V-pos and field offset adjustment.
+* H-pos, V-pos and field-offset adjustments
 * C-sync with or without serration, separate sync, sync polarity flipping.
+* Three user profiles to hold different settings. 
+* Lockout mode to stop stray button presses changing your settings.
 * Headless operation possible, for the most part.
 * Diagnostic tools beyond the simple pass/fail sync rate indication, which itself is nothing to sneeze at!
 
@@ -80,7 +82,7 @@ Adjustment Mode UI tables:
 
 
 ## Mode descriptions
-➕ Mode 1-5, Mode S information table:
+🔸 Mode 1-5, Mode S information table:
 | Mode | Mode 1 | Mode 2 | Mode 3 | Mode 4 | Mode 5 | Mode S |
 |:---|:---|:---|:---|:---|:---|:---|
 | Passes | 15kHz | 31kHz | 15/31kHz | 25kHz | 15/25/31kHz | 15kHz + |
@@ -93,7 +95,7 @@ If you push right up to the edges of any acceptable sync range, detection is inc
 
 There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the output side. This pin is not used by any display, or at worst was used as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
 
-### ➕ Mode S - special
+### 🔸 Mode S - special
 Mode S passes 15kHz as normal, but takes 31kHz and divides it by two to make it 15kHz too - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
 
 If there is no user activity, Mode S reports sync status each 5s (but still blocks sync out of range).
@@ -113,19 +115,19 @@ Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, Mode ED
 |:---|:---|:---|:---|:---|:---|
 | Passes | Per prev. mode | Per prev. mode | 15/25/31kHz | 15/25/31kHz | 15/25/31kHz |
 
-➕ **Mode CS** - sync output method table: (H-/C-sync on Pin 13, V-sync on Pin 14 of the female DB15 output. Flip refers to the input sync polarity. Sync must be in range, still)
+🔸 **Mode CS** - sync output method table: (H-/C-sync on Pin 13, V-sync on Pin 14 of the female DB15 output. Flip refers to the input sync polarity. Sync must be in range, still)
 | Method | M1 (default) | M2 | M3 | M4 | M5 | M6 | M7 |
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | Pin13 | Csync | Csync | Csync (no serr.) | pass | flip | pass | flip |
 | Pin14 | block | pass | pass | pass | pass | flip | flip |
 
-➕ **Mode ED** - moves the h-pos and h-size in the EDID. This affects all DTD’s over the current profile, not per-mode. Hit “Detect” under Windows Display Settings to see any changes, or hot plug dongle while USB-powered.
+🔸 **Mode ED** - moves the h-pos and h-size in the EDID. This affects all DTD’s over the current profile, not per-mode. Hit “Detect” under Windows Display Settings to see any changes, or hot plug dongle while USB-powered.
 
-➕ **Mode H** - moves h-pos. May jitter as the AVR is only granular to 50ns. Better to adjust the source, the CRT, or use Mode ED.
+🔸 **Mode H** - moves h-pos. May jitter as the AVR is only granular to 50ns. Better to adjust the source, the CRT, or use Mode ED.
 
-➕ **Mode V** - moves v-pos.
+🔸 **Mode V** - moves v-pos.
  
-➕ **Mode FO** - field-offset! Interlaced only. Moves the odd field up and down vs the even field, to adjust flicker. I really wanted to try this, and it works, though YMMV.
+🔸 **Mode FO** - field-offset! Interlaced only. Moves the odd field up and down vs the even field, to adjust flicker. I really wanted to try this, and it works, though YMMV.
 
 ## EDID
 Extended Display Identification Data. Your OS reads it from any monitor and then sends the video mode the monitor asked for. The Gyr sync transmits 15kHz, 25kHz and 31kHz modes based on how you set it. Modern OS’s are finicky, won’t do interlaced, but *should* grab the base 240p mode from the 15kHz DTD’s and simply display it. Or 384p/480p depending on what you set. Wait for the green LED on the Gyrsync before plugging in your CRT.
