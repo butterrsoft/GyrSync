@@ -82,7 +82,7 @@ Adjustment Mode UI tables:
 
 If you push right up to the edges of any acceptable sync range, detection is inconsistent and the output and your picture will not be usable. Back off and move your modeline a notch or two inside the safe zone.
 
-There is also one jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the output side. If you have a really, really old monitor that needs Monitor ID bit 0, you may need to remove this. Also, if the dongle seems stuck in some sort of loop.
+There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the output side. This pin is not used by any display, or at worst was used as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
 
 ### ➕ Mode S - special
 Mode S passes 15kHz as normal, but takes 31kHz and divides it by two to make it 15kHz too - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
