@@ -1,5 +1,5 @@
-# GyrSync
-CRT monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480p/31kHz, with EDID, h-pos, v-pos, field-offset, and selectable sync pass/combine/polarity methods. H-sync signals outside the desired range block all sync output. Diagnoses and reports missing sync. RGB is still passed through, so you may see something harmless on screen.
+# 📺 GyrSync 
+CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480p/31kHz, with EDID, h-pos, v-pos, field-offset, and selectable sync pass/combine/polarity methods. H-sync signals outside the desired range are blocked. Diagnoses and reports missing sync. RGB is still passed through, so you may see something harmless on screen.
 
 ((picture))
 
@@ -19,8 +19,7 @@ Lockout ──▶ Factory Reset
    │
    ▼
 Modes 1-5 ──▶ Profile 1/2/3 ──▶ Mode S ──▶ Mode CS ──▶ Mode ED ──▶ Lockout ──▶ Factory Reset
-                               <img width="1600" height="650" alt="UPDI" src="https://github.com/user-attachments/assets/5131518a-c25d-445e-ab4e-063697ede2c6" />
-     │
+                                    │
                                     ▼
                                  Mode H ──▶ Mode V ──▶ Mode FO
 ```
@@ -72,7 +71,7 @@ Adjustment Mode UI tables:
 
 
 ## Mode descriptions
-Mode 1-5, Mode S information table:
+➕ Mode 1-5, Mode S information table:
 | Mode | Mode 1 | Mode 2 | Mode 3 | Mode 4 | Mode 5 | Mode S |
 |:---|:---|:---|:---|:---|:---|:---|
 | Passes | 15kHz | 31kHz | 15/31kHz | 25kHz | 15/25/31kHz | 15kHz + |
@@ -83,7 +82,9 @@ Mode 1-5, Mode S information table:
 
 If you push right up to the edges of any acceptable sync range, detection is inconsistent and the output and your picture will not be usable. Back off and move your modeline a notch or two inside the safe zone.
 
-### Mode S - special
+There is also one jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the output side. If you have a really, really old monitor that needs Monitor ID bit 0, you may need to remove this. Also, if the dongle seems stuck in some sort of loop.
+
+### ➕ Mode S - special
 Mode S passes 15kHz as normal, but takes 31kHz and divides it by two to make it 15kHz too - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
 
 If there is no user activity, Mode S reports sync status each 5s (but still blocks sync out of range).
@@ -103,21 +104,21 @@ Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, Mode ED
 |:---|:---|:---|:---|:---|:---|
 | Passes | Per prev. mode | Per prev. mode | 15/25/31kHz | 15/25/31kHz | 15/25/31kHz |
 
-**Mode CS** - sync output method table: (H-/C-sync on Pin 13, V-sync on Pin 14 of the female DB15 output. Flip refers to the input sync polarity. Sync must be in range, still)
+➕ **Mode CS** - sync output method table: (H-/C-sync on Pin 13, V-sync on Pin 14 of the female DB15 output. Flip refers to the input sync polarity. Sync must be in range, still)
 | Method | M1 (default) | M2 | M3 | M4 | M5 | M6 | M7 |
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | Pin13 | Csync | Csync | Csync (no serr.) | pass | flip | pass | flip |
 | Pin14 | block | pass | pass | pass | pass | flip | flip |
 
-**Mode ED** - moves the h-pos and h-size in the EDID. This affects all DTD’s over the current profile, not per-mode. Hit “Detect” under Windows Display Settings to see any changes, or hot plug dongle while USB-powered.
+➕ **Mode ED** - moves the h-pos and h-size in the EDID. This affects all DTD’s over the current profile, not per-mode. Hit “Detect” under Windows Display Settings to see any changes, or hot plug dongle while USB-powered.
 
-**Mode H** - moves h-pos. May jitter as the AVR is only granular to 50ns. Better to adjust the source, the CRT, or use Mode ED.
+➕ **Mode H** - moves h-pos. May jitter as the AVR is only granular to 50ns. Better to adjust the source, the CRT, or use Mode ED.
 
-**Mode V** - moves v-pos.
+➕ **Mode V** - moves v-pos.
  
-**Mode FO** - field-offset. (!). Interlaced only. Moves the odd field up and down vs the even field, to adjust flicker. I really wanted to try this, and YMMV.
+➕ **Mode FO** - field-offset! Interlaced only. Moves the odd field up and down vs the even field, to adjust flicker. I really wanted to try this, and it works, though YMMV.
 
-### EDID
+## EDID
 Extended Display Identification Data. Your OS reads it from any monitor and then sends the video mode the monitor asked for. The Gyr sync transmits 15kHz, 25kHz and 31kHz modes based on how you set it. Modern OS’s are finicky, won’t do interlaced, but *should* grab the base 240p mode from the 15kHz DTD’s and simply display it. Or 384p/480p depending on what you set. Wait for the green LED on the Gyrsync before plugging in your CRT.
 
 **Troubleshooting EDID**
@@ -129,20 +130,20 @@ Extended Display Identification Data. Your OS reads it from any monitor and then
 
 
 ## Reprogramming:
-Edit your EDID bin files using a free program like Deltacast, but make sure you keep the same filenames. Or modify main.c. The build needs all 6 EDID files, the main.c file and the makefile. Get this AVR build - https://github.com/ZakKemble/avr-gcc-build, along with Git and Make, and install.
+Edit your EDID bin files using a free program like Deltacast, but make sure you keep the same filenames. Or modify main.c. The build needs all 6 EDID files, the main.c file and the makefile. The Gyrsync targets an AVR32EB14. Get [ZakKemble's latest AVR build](https://github.com/ZakKemble/avr-gcc-build) along with [Git](https://git-scm.com/install/windows) and [Make](https://gnuwin32.sourceforge.net/packages/make.htm), and install.
 
-Programming is via UPDI, a 3-wire serial protocol. Probably best done while unplugged from anything else like your GPU or VGA source. You need a low-voltage UPDI friend/clone from aliexpress. Or a USB-to-serial adapter set up as this:
+Programming is via UPDI, a 3-wire serial protocol. Probably best done while unplugged from anything else like your GPU or VGA source. You need a low-voltage UPDI friend/clone from aliexpress. Or even cheaper a USB-to-serial adapter set up as this:
 
-<img width="800" height="325" alt="UPDI" src="https://github.com/user-attachments/assets/1a494dba-6e77-45c0-bf1d-a2d8ce5f0387" />
 
+<img width="600" height="285" alt="UPDI" src="https://github.com/user-attachments/assets/4fc254f3-601a-4799-928e-6fe3038ee7a7" />
 
 On the Gyrsync, stick pins into the VGA female end – pin 9 is 5V, pin 6, 7 or 8 for GND, and pin 11 for UPDI. (Remembering the 1.27mm UPDI jumper) Then open a command prompt or gitbash where you have the project files and type `make clean` then `make TOOLDIR="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/" AVRDUDE="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/avrdude.exe" flash PORT=COM6` remembering to check those paths and com port.
 
+Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eeprom programmers like below (just flip the jumper to TTL and use the pins as marked on the reverse). I did have trouble with a CH340-based cable though.
 
 
-Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eeprom programmers like below (just flip the jumper to TTL and use the pins as marked on the reverse) or a CP2102. I did have trouble with a CH340-based cable though.
+<img width="300" height="230" alt="CH341" src="https://github.com/user-attachments/assets/8f8ad10a-edc0-4bf3-a797-b003165cab01" />
 
-<img width="400" height="306" alt="CH341" src="https://github.com/user-attachments/assets/ecef643d-2f18-40c7-b784-bb0daad23af1" />
 
 
 
