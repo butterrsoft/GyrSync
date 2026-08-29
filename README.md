@@ -91,6 +91,7 @@ Mode 1-5, Mode S information table:
 | DTD 1 | 640x240p | 640x480p | 640x240p | 496x384p | 1280x240p | 640x240p |
 | DTD 2 | 1280x240p | — | 1280x240p | — | 496x384p | 1280x240p |
 | DTD 3 | 720x480i | — | 720x480i | — | 720x480i | 720x480i |
+DTD’s are timings/resolutions the EDID reports to Windows/Linux, if you turn it on. Plug and play, baby!
 
 If you push right up to the edges of any acceptable sync range, detection is inconsistent and the output and your picture will not be usable. Back off and move your modeline a notch or two inside the safe zone.
 
@@ -124,7 +125,7 @@ Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, Mode ED
 
 🔸 **Mode ED** - moves the h-pos and h-size in the EDID. This affects all DTD’s over the current profile, not per-mode. Hit “Detect” under Windows Display Settings to see any changes, or hot plug dongle while USB-powered.
 
-🔸 **Mode H** - moves h-pos. May jitter as the AVR is only granular to 50ns. Better to adjust the source, the CRT, or use Mode ED.
+🔸 **Mode H** - moves h-pos. May jitter as the AVR32EB14 is only granular to 50ns. Better to adjust the source, the CRT, or use Mode ED.
 
 🔸 **Mode V** - moves v-pos.
  
