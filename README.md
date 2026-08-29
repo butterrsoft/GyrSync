@@ -19,7 +19,8 @@ Lockout ──▶ Factory Reset
    │
    ▼
 Modes 1-5 ──▶ Profile 1/2/3 ──▶ Mode S ──▶ Mode CS ──▶ Mode ED ──▶ Lockout ──▶ Factory Reset
-                                    │
+                               <img width="1600" height="650" alt="UPDI" src="https://github.com/user-attachments/assets/5131518a-c25d-445e-ab4e-063697ede2c6" />
+     │
                                     ▼
                                  Mode H ──▶ Mode V ──▶ Mode FO
 ```
@@ -132,6 +133,7 @@ Edit your EDID bin files using a free program like Deltacast, but make sure you 
 
 Programming is via UPDI, a 3-wire serial protocol. Probably best done while unplugged from anything else like your GPU or VGA source. You need a low-voltage UPDI friend/clone from aliexpress. Or a USB-to-serial adapter set up as this:
 
+<img width="800" height="325" alt="UPDI" src="https://github.com/user-attachments/assets/1a494dba-6e77-45c0-bf1d-a2d8ce5f0387" />
 
 
 On the Gyrsync, stick pins into the VGA female end – pin 9 is 5V, pin 6, 7 or 8 for GND, and pin 11 for UPDI. (Remembering the 1.27mm UPDI jumper) Then open a command prompt or gitbash where you have the project files and type `make clean` then `make TOOLDIR="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/" AVRDUDE="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/avrdude.exe" flash PORT=COM6` remembering to check those paths and com port.
@@ -139,6 +141,9 @@ On the Gyrsync, stick pins into the VGA female end – pin 9 is 5V, pin 6, 7 or 
 
 
 Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eeprom programmers like below (just flip the jumper to TTL and use the pins as marked on the reverse) or a CP2102. I did have trouble with a CH340-based cable though.
+
+<img width="400" height="306" alt="CH341" src="https://github.com/user-attachments/assets/ecef643d-2f18-40c7-b784-bb0daad23af1" />
+
 
 
 
