@@ -6,10 +6,19 @@ CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480
 Powered via your VGA port, or any USB-C cable. Or both; USB cannot backfeed VGA. Updates/reprograms via a single Gitbash Make command through an $8USD UPDI friend.
 
 ### Acknowledgments/Confessions:
-Built after Gambaman’s superb [Ultimate VGA to Scart Adapter](https://hackaday.io/project/165634-the-ultimate-vga-to-scart-adapter). I got carried away. Code by Claude, and, yes, I am embarrassed. All free and open-source, but who doesn't like seeing their name in print? :)
+Built after Gambaman’s game-changing [Ultimate VGA to Scart Adapter](https://hackaday.io/project/165634-the-ultimate-vga-to-scart-adapter). I got carried away. Code by Claude, and, yes, I am embarrassed. All free and open-source, but who doesn't like seeing their name in print? :)
+
+## Primary features
+* Monitor sync protection at 15kHz and/or 25kHz and/or 31kHz.
+* VGA (TTL) only (Windows, Linux, MiSTer, HDMI-to-VGA dongles.)
+* EDID can be turned on/off, or adjusted.
+* H-pos, V-pos and field offset adjustment.
+* C-sync with or without serration, separate sync, sync polarity flipping.
+* Headless operation possible, for the most part.
+* Diagnostic tools beyond the simple pass/fail sync rate indication, which itself is nothing to sneeze at!
 
 ## UI Navigation
-There is one Single button-presses change basic modes and adjust settings. Button-holds are timed to move between secondary modes, activating on release. Set the dongle as you want, then lock it so you can’t bump anything.
+UI is one button and one LED. Single button-presses change basic modes and adjust settings. Button-holds are timed to move between secondary modes, activating on release. Set the dongle as you want, then lock it so you can’t bump anything.
 
 Dongle starts at Factory Reset – Mode 1, Profile 1, button locked out, EDID off, all adjustments at default.
 
