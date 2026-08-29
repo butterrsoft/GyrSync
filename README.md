@@ -6,7 +6,7 @@ CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480
 Powered via your VGA port, or any USB-C cable. Or both; USB cannot backfeed VGA. Updates/reprograms via a single Gitbash Make command through an $8USD UPDI friend.
 
 ### Acknowledgments/Confessions:
-Built after Gambaman’s game-changing [Ultimate VGA to Scart Adapter](https://hackaday.io/project/165634-the-ultimate-vga-to-scart-adapter). I thought i would see if i could update it and got carried away. Code by Claude, and, yes, I am embarrassed by that. All free and open-source, but who doesn't like seeing their name in print? 😆
+I thought i might update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](https://hackaday.io/project/165634-the-ultimate-vga-to-scart-adapter) and got carried away. Code by Claude, and, yes, I am embarrassed by that. All free and open-source, but who doesn't like seeing their name in print? 😆
 
 ## Primary features
 * Monitor sync protection at 15kHz and/or 25kHz and/or 31kHz. You can choose.
