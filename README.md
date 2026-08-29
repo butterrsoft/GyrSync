@@ -83,7 +83,7 @@ Adjustment Mode UI tables:
 
 ## Mode descriptions
 🔸 Mode 1-5, Mode S information table:
-| Mode | Mode 1 | Mode 2 | Mode 3 | Mode 4 | Mode 5 | Mode S |
+| Mode |🔸Mode 1 | 🔸Mode 2 | 🔸Mode 3 | 🔸Mode 4 | 🔸Mode 5 | 🔸Mode S |
 |:---|:---|:---|:---|:---|:---|:---|
 | Passes | 15kHz | 31kHz | 15/31kHz | 25kHz | 15/25/31kHz | 15kHz + |
 | EDID name | Mode1 - 15kHz | Mode 2 - 31kHz | Mode 3 - dualsyn | Mode 4 - 25kHz | Mode 5 - Trisync | Mode S - special |
