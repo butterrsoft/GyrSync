@@ -1,5 +1,5 @@
 # 📺 GyrSync 
-CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480p/31kHz, with EDID, h-pos, v-pos, field-offset, and selectable sync pass/combine/polarity methods. H-sync signals outside the desired range are blocked. Diagnoses and reports missing sync. RGB is still passed through, so you may see something harmless on screen.
+CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480p/31kHz, with EDID, h-pos, v-pos, field-offset, and selectable sync pass/combine/polarity methods. With Hsync in the desired range, the Green LED comes on, and the dongle outputs C-sync on VGA pin 13 (or separate sync, if desired). With H-sync signals outside the desired range, the RED led comes on and sync output is blocked. RGB still passes through, so you may see something harmless on screen.
 
 ((picture))
 
@@ -8,8 +8,8 @@ Powered via your VGA port, or any USB-C cable. Or both; USB cannot backfeed VGA.
 ### Acknowledgments/Confessions:
 Built after Gambaman’s superb [Ultimate VGA to Scart Adapter](https://hackaday.io/project/165634-the-ultimate-vga-to-scart-adapter). I got carried away. Code by Claude, and, yes, I am embarrassed. All free and open-source, but who doesn't like seeing their name in print? :)
 
-## UI
-Single button-presses change basic modes and adjust settings. Button-holds are timed to move between secondary modes, activating on release. Set the dongle as you want, then lock it so you can’t bump anything.
+## UI Navigation
+There is one Single button-presses change basic modes and adjust settings. Button-holds are timed to move between secondary modes, activating on release. Set the dongle as you want, then lock it so you can’t bump anything.
 
 Dongle starts at Factory Reset – Mode 1, Profile 1, button locked out, EDID off, all adjustments at default.
 
