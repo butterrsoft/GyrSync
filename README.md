@@ -6,12 +6,12 @@ CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480
 Powered via your VGA port, or any USB-C cable. Or both; USB cannot backfeed VGA. Updates/reprograms via a single Gitbash Make command through an $8USD UPDI friend.
 
 ### Acknowledgments/Confessions:
-Built after Gambaman’s superb Ultimate VGA to Scart Adapter. I got carried away. Code by Claude, and, yes, I am embarrassed. All free and open-source, but who doesn't like seeing their name in print? :)
+Built after Gambaman’s superb [Ultimate VGA to Scart Adapter](https://hackaday.io/project/165634-the-ultimate-vga-to-scart-adapter). I got carried away. Code by Claude, and, yes, I am embarrassed. All free and open-source, but who doesn't like seeing their name in print? :)
 
 ## UI
 Single button-presses change basic modes and adjust settings. Button-holds are timed to move between secondary modes, activating on release. Set the dongle as you want, then lock it so you can’t bump anything.
 
-Dongle starts at Factory Reset – Mode 1, Profile 1, button locked out. 
+Dongle starts at Factory Reset – Mode 1, Profile 1, button locked out, EDID off, all adjustments at default.
 
 UI topology:
 ```text
@@ -122,11 +122,11 @@ Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, Mode ED
 Extended Display Identification Data. Your OS reads it from any monitor and then sends the video mode the monitor asked for. The Gyr sync transmits 15kHz, 25kHz and 31kHz modes based on how you set it. Modern OS’s are finicky, won’t do interlaced, but *should* grab the base 240p mode from the 15kHz DTD’s and simply display it. Or 384p/480p depending on what you set. Wait for the green LED on the Gyrsync before plugging in your CRT.
 
 **Troubleshooting EDID**
-*Make sure EDID is on on the GyrSync.
-*Windows Display Settings > Advanced Display Settings for Desktop Resolution vs Active Signal Resolution.
-*Turn off scaling in your GPU settings – Nvidia CP has it under desktop size & position – no scaling.
-*Some HDMI dongles may mux-in EDID, which is ok, or simply provide their own, which is not.
-*Something like crt_emudriver, or setting a cmdline.txt EDID in Linux, can override any physical EDID, and you will not see the GyrSync or it’s modelines listed anywhere. (Sync-protection and other features will still work as normal)
+* Make sure EDID on the GyrSync is turned on.
+* Windows Display Settings > Advanced Display Settings for Desktop Resolution vs Active Signal Resolution.
+* Turn off scaling in your GPU settings – Nvidia CP has it under desktop size & position – no scaling.
+* Some HDMI dongles may mux-in EDID, which is ok, or simply provide their own, which is not.
+* Something like crt_emudriver, or setting a cmdline.txt EDID in Linux, can override any physical EDID, and you will not see the GyrSync or it’s modelines listed anywhere. (Sync-protection and other features will still work as normal)
 
 
 ## Reprogramming:
