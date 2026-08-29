@@ -10,10 +10,11 @@ Built after Gambaman’s game-changing [Ultimate VGA to Scart Adapter](https://h
 
 ## Primary features
 * Monitor sync protection at 15kHz and/or 25kHz and/or 31kHz. You can choose.
+* Vsync passes at 45-75Hz. But also when not present, so you can work only with H-sync if desired.
 * VGA (TTL) only (Windows, Linux, MiSTer, HDMI-to-VGA dongles.)
 * EDID can be turned on/off, or adjusted.
 * H-pos, V-pos and field-offset adjustments
-* C-sync with or without serration, separate sync, sync polarity flipping.
+* C-sync output with or without serration, separate H- and V-sync, sync polarity flipping.
 * Three user profiles to hold different settings. 
 * Lockout mode to stop stray button presses changing your settings.
 * Headless operation possible, for the most part.
@@ -82,7 +83,7 @@ Adjustment Mode UI tables:
 
 
 ## Mode descriptions
-🔸 Mode 1-5, Mode S information table:
+Mode 1-5, Mode S information table:
 | Mode |🔸Mode 1 | 🔸Mode 2 | 🔸Mode 3 | 🔸Mode 4 | 🔸Mode 5 | 🔸Mode S |
 |:---|:---|:---|:---|:---|:---|:---|
 | Passes | 15kHz | 31kHz | 15/31kHz | 25kHz | 15/25/31kHz | 15kHz + |
@@ -96,7 +97,7 @@ If you push right up to the edges of any acceptable sync range, detection is inc
 There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the output side. This pin is not used by any display, or at worst was used as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
 
 ### 🔸 Mode S - special
-Mode S passes 15kHz as normal, but takes 31kHz and divides it by two to make it 15kHz too - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
+Mode S passes 15kHz as normal, but takes 31kHz and havles it to make it 15kHz also - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
 
 If there is no user activity, Mode S reports sync status each 5s (but still blocks sync out of range).
 
