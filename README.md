@@ -1,5 +1,8 @@
 # 📺 GyrSync 
-CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480p/31kHz, with EDID, h-pos, v-pos, field-offset, and selectable sync pass/combine/polarity methods. With Hsync in the desired range, the Green LED comes on, and the dongle outputs C-sync on VGA pin 13 (or separate sync, if desired). With H-sync signals outside the desired range, the RED led comes on and sync output is blocked. RGB still passes through, so you may see something harmless on screen.
+
+<img width="2000" height="340" alt="Gyr5" src="https://github.com/user-attachments/assets/af9bb90f-d9c1-43df-99e5-139352f99b71" />
+
+CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480p/31kHz, with EDID, h-pos, v-pos, field-offset, and selectable sync pass/combine/polarity methods. Takes VGA/RGBHV input. Outputs C-sync on VGA pin 13 (or separate sync, if desired) when safe. Otherwise the RED led comes on and sync output is blocked. RGB still passes through, so you may see something harmless on screen.
 
 ((picture))
 
