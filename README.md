@@ -138,7 +138,7 @@ Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, Mode ED
 🔸 **Mode FO** - field-offset! Interlaced only. Moves the odd field up and down vs the even field, to adjust flicker. I really wanted to try this, and it works, though YMMV.
 
 ## EDID
-Extended Display Identification Data. Your OS reads it from any monitor and then sends the video timing mode the monitor asked for. The Gyr sync transmits 15kHz, 25kHz and 31kHz timings based on how you set it. Modern OS’s are finicky, won’t do interlaced, but *should* grab the base 240p mode from the 15kHz timings and simply display it. Or 384p/480p depending on what you set. Wait for the green LED on the Gyrsync before plugging in your CRT.
+Extended Display Identification Data. Your OS reads it from any monitor and then sends the video timing mode the monitor asked for. The GyrSync transmits 15kHz, 25kHz and 31kHz timings based on how you set it. Modern OS’s are finicky, won’t do interlaced, but *should* grab the base 240p mode from the 15kHz timings and simply display it. Or 384p/480p depending on what you set. Wait for the green LED on the Gyrsync before plugging in your CRT.
 
 **Troubleshooting EDID**
 * Make sure EDID on the GyrSync is turned on.
