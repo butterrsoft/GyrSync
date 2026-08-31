@@ -14,7 +14,7 @@ I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](ht
 ## Primary features
 * Monitor sync protection at 15kHz and/or 25kHz and/or 31kHz.
 * Vsync passes at 45-75Hz. But also when not present, so you can work only with H-sync if desired.
-* VGA (TTL) only (Windows, Linux, MiSTer, HDMI-to-VGA dongles.) Input via DB15 3-row male plug, output via female socket.
+* VGA (TTL) input only (Windows, Linux, MiSTer, HDMI-to-VGA) via DB15 3-row male plug, output via female socket.
 * EDID can be turned on/off, or adjusted.
 * H-pos, V-pos and field-offset adjustments
 * C-sync output with or without serration, separate H- and V-sync, sync polarity flipping.
