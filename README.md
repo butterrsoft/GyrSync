@@ -2,7 +2,7 @@
 
 <img width="2000" height="340" alt="Gyr5" src="https://github.com/user-attachments/assets/af9bb90f-d9c1-43df-99e5-139352f99b71" />
 
-CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480p/31kHz, with EDID, h-pos, v-pos, field-offset, and selectable sync pass/combine/polarity methods. Takes VGA/RGBHV input. Outputs C-sync on VGA pin 13 (or separate sync, if desired) when safe. Otherwise the RED led comes on and sync output is blocked. RGB still passes through, so you may see something harmless on screen.
+CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480p/31kHz, with EDID, h-pos, v-pos, field-offset, and selectable sync pass/combine/polarity methods. Takes VGA/RGBHV input. Outputs C-sync on VGA pin 13 (or separate sync, if desired) when safe. Otherwise the RED led comes on and sync output is blocked. RGB still passes through, which is harmless on screen.
 
 ((picture))
 
@@ -14,19 +14,20 @@ I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](ht
 ## Primary features
 * Monitor sync protection at 15kHz and/or 25kHz and/or 31kHz.
 * Vsync passes at 45-75Hz. But also when not present, so you can work only with H-sync if desired.
+* Great for proving you're outputting the right video mode - comes in handy during any setup!
 * VGA (TTL) input only (Windows, Linux, MiSTer, HDMI-to-VGA) via DB15 3-row male plug, output via female socket.
-* EDID can be turned on/off, or adjusted.
-* H-pos, V-pos and field-offset adjustments
-* C-sync output with or without serration, separate H- and V-sync, sync polarity flipping.
-* Three user profiles to hold different settings. 
-* Lockout mode to stop stray button presses changing your settings.
+* EDID can be turned on/off, and adjusted.
+* H-pos, V-pos and field-offset adjustments.
+* C-sync output with or without serration, separate H- and V-sync, sync polarity pass/flip.
+* Three user profiles can hold different settings. 
+* Lockout mode swallows stray button presses.
 * Headless UI operation possible, for the most part.
 * Diagnostic tools beyond the simple pass/fail sync rate indication, which itself is nothing to sneeze at!
 
 ## UI Navigation
 UI is one button and one LED. Single button-presses change basic modes and adjust settings. Button-holds are timed to move between secondary modes, activating on release. Set the dongle as you want, then lock it so you can’t bump anything.
 
-Dongle starts at Factory Reset – Mode 1, Profile 1, button locked out, EDID off, all adjustments at default.
+Dongle starts at Factory Reset – Mode 1, Profile 1, button locked out, Csync output, EDID off, all adjustments at default.
 
 UI topology:
 ```text
@@ -99,7 +100,7 @@ Mode 1-5, Mode S information table:
 * If you push right up to the edges of any acceptable sync range, detection is inconsistent and the output and your picture will not be usable. Back off and move your modeline a notch or two inside the safe zone.
 * Remember that Vsync must always be 45-65Hz, or absent entirely, or output is blocked!
 
-There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is not used by any display, or at worst was used in the early '80's as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
+There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is not used by any display, or at most was used in the early '80's as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
 
 ### 🔸 Mode S - special
 Mode S passes 15kHz as normal, but takes 31kHz and havles it to make it 15kHz also - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
