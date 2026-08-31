@@ -95,9 +95,9 @@ Mode 1-5, Mode S information table:
 | DTD 2 | 1280x240p | — | 1280x240p | — | 496x384p | 1280x240p |
 | DTD 3 | 720x480i | — | 720x480i | — | 720x480i | 720x480i |
 
-DTD’s are timings/resolutions reported to Windows/Linux if you turn EDID on. Plug and play, baby!
-
-If you push right up to the edges of any acceptable sync range, detection is inconsistent and the output and your picture will not be usable. Back off and move your modeline a notch or two inside the safe zone.
+* DTD’s are timings/resolutions reported to Windows/Linux if you turn EDID on. Plug and play, baby!
+* If you push right up to the edges of any acceptable sync range, detection is inconsistent and the output and your picture will not be usable. Back off and move your modeline a notch or two inside the safe zone.
+* Remember that Vsync must always be 45-65Hz, or absent entirely, or output is blocked!
 
 There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the output side. This pin is not used by any display, or at worst was used as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
 
