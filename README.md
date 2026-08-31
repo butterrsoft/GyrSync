@@ -164,7 +164,9 @@ Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eepr
 <img width="300" height="230" alt="CH341" src="https://github.com/user-attachments/assets/8f8ad10a-edc0-4bf3-a797-b003165cab01" />
 
 ### Editing EDID files
-Edit the project EDID files using a free program like Deltacast, or use your own, but keep the same filenames. The build needs the main.c file, the makefile, and all 6 EDID files named the same as the originals. There is no protection from bad EDID files in the code, but it will still block ranges as normal. Restore the original EDID's if you get into trouble.
+Edit the project EDID files using a free program like Deltacast, or use your own, but keep the same filenames. The build needs the main.c file, the makefile, and all 6 EDID files named the same as the originals. The intent is to allow you to adjust the picture a bit, and there is no protection from bad EDID files in the code, though it will still allow/block ranges as normal. Restore the original EDID's if you get into trouble.
+
+Linux needs separate EDID's as it interprets the interlaced descriptor differently. 480i on Windows = 240i@60Hz, on Linux = 480i@30Hz. If you don't use 480i you won't notice.
 
 
 
