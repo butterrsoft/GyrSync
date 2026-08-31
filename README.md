@@ -97,7 +97,8 @@ Mode 1-5, Mode S information table:
 | DTD 3 | 720x480i | — | 720x480i | — | 720x480i | 720x480i |
 
 * DTD’s are timings/resolutions reported to Windows/Linux if you turn EDID on. Plug and play, baby!
-* If you push right up to the edges of any acceptable sync range, detection is inconsistent and the output and your picture will not be usable. Back off and move your modeline a notch or two inside the safe zone.
+* Windows gets shitty about delivering interlaced in many cases.
+* If you push right up to the edges of any acceptable sync range, pass/fail detection is inconsistent and the output, along with your picture, will not be usable. Back off and move your modeline a notch or two inside the safe zone.
 * Remember that Vsync (FPS) must be 45-65Hz, or absent entirely, or output is blocked!
 
 There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is not used by any display, or at most was used in the early '80's as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
@@ -156,7 +157,7 @@ Programming is via UPDI, a 3-wire serial protocol. Probably best done while unpl
 
 <img width="600" height="285" alt="UPDI" src="https://github.com/user-attachments/assets/4fc254f3-601a-4799-928e-6fe3038ee7a7" />
 
-On the Gyrsync, stick pins into the VGA female end – pin 9 is 5V, pin 6, 7 or 8 for GND, and pin 11 for UPDI. (Remembering the 1.27mm UPDI jumper) Then open a command prompt or gitbash where you have the project files and type `make clean` then `make TOOLDIR="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/" AVRDUDE="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/avrdude.exe" flash PORT=COM6` remembering to check those paths and com port.
+On the Gyrsync, stick pins into the VGA female end – pin 9 is 5V, pin 6, 7 or 8 for GND, and pin 11 for UPDI. Remember the 1.27mm UPDI jumper, if you removed it. Then open a command prompt or gitbash where you have the project files and type `make clean` then `make TOOLDIR="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/" AVRDUDE="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/avrdude.exe" flash PORT=COM6` remembering to check those paths and com port.
 
 Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eeprom programmers like below (just flip the jumper to TTL and use the pins as marked on the reverse). I did have trouble with a CH340-based cable though.
 
@@ -164,7 +165,7 @@ Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eepr
 <img width="300" height="230" alt="CH341" src="https://github.com/user-attachments/assets/8f8ad10a-edc0-4bf3-a797-b003165cab01" />
 
 ### Editing EDID files
-Edit the project EDID files using a free program like Deltacast, or use your own, but keep the same filenames. The build needs the main.c file, the makefile, and all 6 EDID files named the same as the originals. The intent is to allow you to adjust the picture a bit, and there is no protection from bad EDID files in the code, though it will still allow/block ranges as normal. Restore the original EDID's if you get into trouble.
+Edit the project EDID files using a free program like Deltacast, or use your own, but keep the same filenames. The build needs the main.c file, the makefile, and all 6 EDID files named the same as the originals. The intent is to allow you to adjust the picture a bit or add your own DTD timings, and there is no protection from bad EDID files in the code, though it will still allow/block ranges as normal. If you do not add a CEA extension block, or pad the EDID, the code will add an extension block making HDMI audio possible. If you get into trouble, restore the original EDID's.
 
 Linux needs separate EDID's as it interprets the interlaced descriptor differently. 480i on Windows = 240i@60Hz, on Linux = 480i@30Hz. If you don't use interlaced modes you won't notice.
 
