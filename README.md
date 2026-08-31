@@ -20,7 +20,7 @@ I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](ht
 * C-sync output with or without serration, separate H- and V-sync, sync polarity flipping.
 * Three user profiles to hold different settings. 
 * Lockout mode to stop stray button presses changing your settings.
-* Headless operation possible, for the most part.
+* Headless UI operation possible, for the most part.
 * Diagnostic tools beyond the simple pass/fail sync rate indication, which itself is nothing to sneeze at!
 
 ## UI Navigation
