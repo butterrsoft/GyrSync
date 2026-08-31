@@ -127,7 +127,7 @@ Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, Mode ED
 | Pin13 | Csync | Csync | Csync (no serr.) | pass | flip | pass | flip |
 | Pin14 | block | pass | pass | pass | pass | flip | flip |
 
-🔸 **Mode ED** - moves the h-pos and h-size in the EDID. This affects all DTD’s over the current profile, not per-mode. Hit “Detect” under Windows Display Settings to see any changes, or hot plug dongle while USB-powered.
+🔸 **Mode ED** - moves the h-pos and h-size in the EDID. This affects all DTD’s over the current profile, not per-mode. Changes do not show on the CRT as you make them - you must hit “Detect” under Windows Display Settings to see any changes, or hot plug dongle while USB-powered.
 
 🔸 **Mode H** - moves h-pos. May jitter as the AVR32EB14 is only granular to 50ns. Better to adjust the source, the CRT, or use Mode ED.
 
@@ -147,7 +147,7 @@ Extended Display Identification Data. Your OS reads it from any monitor and then
 
 
 ## Reprogramming:
-Edit your EDID bin files using a free program like Deltacast, but make sure you keep the same filenames. Or modify main.c. The build needs all 6 EDID files, the main.c file and the makefile. The Gyrsync targets an AVR32EB14. Get [ZakKemble's latest AVR build](https://github.com/ZakKemble/avr-gcc-build) along with [Git](https://git-scm.com/install/windows) and [Make](https://gnuwin32.sourceforge.net/packages/make.htm), and install.
+The Gyrsync targets an AVR32EB14. Get [ZakKemble's latest AVR build](https://github.com/ZakKemble/avr-gcc-build) along with [Git](https://git-scm.com/install/windows) and [Make](https://gnuwin32.sourceforge.net/packages/make.htm), and install.
 
 Programming is via UPDI, a 3-wire serial protocol. Probably best done while unplugged from anything else like your GPU or VGA source. You need a low-voltage UPDI friend/clone from aliexpress. Or even cheaper a USB-to-serial adapter set up as this:
 
@@ -161,6 +161,8 @@ Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eepr
 
 <img width="300" height="230" alt="CH341" src="https://github.com/user-attachments/assets/8f8ad10a-edc0-4bf3-a797-b003165cab01" />
 
+# Editing EDID files
+Edit the project EDID files using a free program like Deltacast, or use your own, but keep the same filenames. The build needs the main.c file, the makefile, and all 6 EDID files named the same as the originals. There is no protection from bad EDID files in the code, but it will still block ranges as normal. Restore the original EDID's if you get into trouble.
 
 
 
