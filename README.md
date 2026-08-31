@@ -13,7 +13,7 @@ I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](ht
 
 ## Primary features
 * Monitor sync protection at 15kHz and/or 25kHz and/or 31kHz.
-* Vsync passes at 45-75Hz. But also when not present, so you can work only with H-sync if desired.
+* Vsync passes at 45-65Hz. But also when not present, so you can work only with H-sync if desired.
 * Great for proving you're outputting the right video mode - comes in handy during system setup!
 * VGA (TTL) RGBHV input only (Windows, Linux, MiSTer, HDMI-to-VGA) via DB15 3-row male plug, output via female socket.
 * EDID can be turned on/off, and adjusted.
@@ -98,7 +98,7 @@ Mode 1-5, Mode S information table:
 
 * DTD’s are timings/resolutions reported to Windows/Linux if you turn EDID on. Plug and play, baby!
 * If you push right up to the edges of any acceptable sync range, detection is inconsistent and the output and your picture will not be usable. Back off and move your modeline a notch or two inside the safe zone.
-* Remember that Vsync must always be 45-65Hz, or absent entirely, or output is blocked!
+* Remember that Vsync (FPS) must be 45-65Hz, or absent entirely, or output is blocked!
 
 There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is not used by any display, or at most was used in the early '80's as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
 
