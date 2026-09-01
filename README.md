@@ -150,7 +150,7 @@ Extended Display Identification Data. Your OS reads it from any monitor and then
 
 
 ## Reprogramming:
-The Gyrsync targets an AVR32EB14. Get [ZakKemble's latest AVR build](https://github.com/ZakKemble/avr-gcc-build) along with [Git](https://git-scm.com/install/windows) and [Make](https://gnuwin32.sourceforge.net/packages/make.htm), and install.
+The Gyrsync targets an AVR32EB14. Get [ZakKemble's latest AVR build](https://github.com/ZakKemble/avr-gcc-build) along with the install exe's for [Git](https://git-scm.com/install/windows) and [Make](https://gnuwin32.sourceforge.net/packages/make.htm), and install. Copy make.exe, libintl3.dll and libiconv2.dll into C:\Program Files\Git\usr\bin (or wherever you installed) or set your paths.
 
 Programming is via UPDI, a 3-wire serial protocol. Probably best done while unplugged from anything else like your GPU or VGA source. You need a low-voltage UPDI friend/clone from aliexpress. Or even cheaper a USB-to-serial adapter set up as this:
 
