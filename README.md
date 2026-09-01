@@ -144,7 +144,7 @@ Extended Display Identification Data. Your OS reads it from any monitor and then
 * Make sure EDID on the GyrSync is turned on.
 * Windows Display Settings > Advanced Display Settings for Desktop Resolution vs Active Signal Resolution.
 * Turn off scaling in your GPU settings – Nvidia CP has it under desktop size & position – no scaling.
-* Some HDMI dongles may mux-in EDID, which is ok, or simply provide their own, which is not.
+* Some HDMI-to-VGA dongles may mux-in EDID, which is ok, or simply provide their own, which is not.
 * The EDID's allow audio over HDMI - change sound output in Windows if you need to.
 * Something like crt_emudriver, CRU, or setting a cmdline.txt EDID in Linux, can override any physical EDID, and you will not see the GyrSync or it’s modelines listed anywhere. (Sync-protection and other features will still work as normal)
 
