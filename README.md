@@ -148,9 +148,11 @@ Extended Display Identification Data. Your OS reads it from any monitor and then
 * The EDID's allow audio over HDMI - change sound output in Windows if you need to.
 * Something like crt_emudriver, CRU, or setting a cmdline.txt EDID in Linux, can override any physical EDID, and you will not see the GyrSync or it’s modelines listed anywhere. (Sync-protection and other features will still work as normal)
 
+HDMI-to-VGA adapters can be great, but most cheap ones are now complete shit. I had a source of good cheap ones i was going to link, but the manufacturer "updated" them.
+
 
 ## Reprogramming:
-The Gyrsync targets an AVR32EB14. Programming on Windows needs [ZakKemble's latest AVR build](https://github.com/ZakKemble/avr-gcc-build) along with the install exe's, not zips, for [Git](https://git-scm.com/install/windows) and [Make](https://gnuwin32.sourceforge.net/packages/make.htm). Install git and make, then copy `make.exe`, `libintl3.dll` and `libiconv2.dll` into C:\Program Files\Git\usr\bin (or wherever you installed) or set your paths.
+The GyrSync targets an AVR32EB14. Programming on Windows needs [ZakKemble's latest AVR build](https://github.com/ZakKemble/avr-gcc-build) along with the install exe's, not zips, for [Git](https://git-scm.com/install/windows) and [Make](https://gnuwin32.sourceforge.net/packages/make.htm). Install git and make, then copy `make.exe`, `libintl3.dll` and `libiconv2.dll` into C:\Program Files\Git\usr\bin (or wherever you installed) or set your paths.
 
 Programming is via UPDI, a 3-wire serial protocol. Probably best done while unplugged from anything else like your GPU or VGA source. You need a low-voltage UPDI friend/clone from aliexpress. Or even cheaper a USB-to-serial adapter set up as this:
 
