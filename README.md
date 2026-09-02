@@ -148,7 +148,7 @@ Extended Display Identification Data. Your OS reads it from any monitor and then
 * The EDID's allow audio over HDMI - change sound output in Windows if you need to.
 * Something like crt_emudriver, CRU, or setting a cmdline.txt EDID in Linux, can override any physical EDID, and you will not see the GyrSync or it’s modelines listed anywhere. (Sync-protection and other features will still work as normal)
 
-HDMI-to-VGA adapters can be great, but most cheap ones are now complete shit. I had a source of good cheap ones i was going to link, but the manufacturer "updated" them.
+HDMI-to-VGA adapters can be great, but most cheap ones are now complete shit. At time of writing, [this one](https://www.aliexpress.com/item/32976152001.html?spm=a2g0o.order_list.order_list_main.30.49cd1802Jc2KAH) works with the GyrSync, and probably with 240p in general :) You need a monitor plugged in, but not necessarily turned on - it must be detecting via the 75R terminations.
 
 
 ## Reprogramming:
