@@ -118,7 +118,7 @@ Adjustments are possible without a picture – power the dongle from any USB-C c
 
 Adj. modes time out back to the mode you came from in 20s, or 30s for Mode ED. Same happens on reboot. Unsaved changes are discarded.
 
-Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, Mode ED is still at 25kHz.)
+Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, then Mode ED is still at 25kHz.)
 |  | Mode CS | Mode ED | Mode H | Mode V | Mode FO |
 |:---|:---|:---|:---|:---|:---|
 | Passes | Per prev. mode | Per prev. mode | 15/25/31kHz | 15/25/31kHz | 15/25/31kHz |
