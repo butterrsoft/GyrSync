@@ -104,7 +104,7 @@ Mode 1-5, Mode S information table:
 There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is not used by any display, or at most was used in the early '80's as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
 
 ### 🔸 Mode S - special
-Mode S passes 15kHz as normal, but takes 31kHz and havles it to make it 15kHz also - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
+Mode S passes 15kHz as normal, but takes 31kHz and halves it to make it 15kHz also - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
 
 If there is no user activity, Mode S reports sync status each 5s (but still blocks sync out of range).
 
@@ -154,15 +154,13 @@ HDMI-to-VGA adapters can be great, but most cheap ones are now complete shit. At
 ## Reprogramming:
 The GyrSync targets an AVR32EB14. Programming on Windows needs [ZakKemble's latest AVR build](https://github.com/ZakKemble/avr-gcc-build) along with the install exe's, not zips, for [Git](https://git-scm.com/install/windows) and [Make](https://gnuwin32.sourceforge.net/packages/make.htm). Install git and make, then copy `make.exe`, `libintl3.dll` and `libiconv2.dll` into C:\Program Files\Git\usr\bin (or wherever you installed) or set your paths.
 
-Programming is via UPDI, a 3-wire serial protocol. Probably best done while unplugged from anything else like your GPU or VGA source. You need a low-voltage UPDI friend/clone from aliexpress. Or even cheaper a USB-to-serial adapter set up as this:
-
+Programming is via UPDI 3-wire serial protocol. Unplug from your GPU or VGA source. Get a low-voltage UPDI friend/clone from aliexpress. Or even cheaper a USB-to-serial adapter set up as this:
 
 <img width="600" height="285" alt="UPDI" src="https://github.com/user-attachments/assets/4fc254f3-601a-4799-928e-6fe3038ee7a7" />
 
 On the Gyrsync, stick pins into the VGA female end – pin 9 is 5V, pin 6, 7 or 8 for GND, and pin 11 for UPDI. Remember the 1.27mm UPDI jumper, if you removed it. Then open a command prompt or gitbash where you have the project files and type `make clean` then `make TOOLDIR="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/" AVRDUDE="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/avrdude.exe" flash PORT=COM6` remembering to check those paths and com port.
 
 Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eeprom programmers like below (just flip the jumper to TTL and use the pins as marked on the reverse). I did have trouble with a CH340-based cable though.
-
 
 <img width="300" height="230" alt="CH341" src="https://github.com/user-attachments/assets/8f8ad10a-edc0-4bf3-a797-b003165cab01" />
 
