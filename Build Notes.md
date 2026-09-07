@@ -3,24 +3,24 @@ This build is a bitch. I will probably update with a larger through-hole PCB, or
 
 Order PCB at 1.0mm thick or less. Make sure you get VGA plugs/sockets with straight, thin pins. NOT solder pins with the cup-shape. Hard to find, but required here.
 
-If you don't build in the following order, you will run into problems. Get some kapton tape. Go slowly. Check continuity to make sure you haven't shorted anything at each step. Work out *why* you are trimming each VGA pin before doing so. Measure twice, cut once.
+If you don't build in the following order, you will run into problems. Get some kapton tape. Go slowly. Check continuity to make sure you haven't shorted anything at each step. Work out *why* you are trimming each leg or VGA pin before doing so. Measure twice, cut once.
 
 ## Solder components in this order:
 1. Schottky
 2. Resistor for Green LED
 3. Oscillator
-4. tactile switch (trim legs before osldering so they don't poke through at all, then insulate the pad closest to the top middle with kapton tape, so the USB-C socket doesn't short to ground)
+4. Tactile switch (trim legs before osldering so they don't poke through at all, then insulate the pad closest to the top middle with kapton tape, so the USB-C socket doesn't short to ground)
 5. All other SMD components on the top side but NOT the 5k1 resistors
 6. USB-C (make sure not to ground the switch!)
 7. 5k1 resistors
 8. All sMD components on the lower side, but not the AVR23EB14 main IC
-9. male/female DB15 3-row plug/socket (making sure to trim pins as below)
+9. Male/female DB15 3-row plug/socket (making sure to trim pins as below)
 10. RGB wires (I like 28AWG solid-core high-temp wire for this). Connect pin1 to pin1, pin2 to pin2, pin3 to pin3.
 11. 1.27mm 2-pin header
-12. Blue LED (you will probably want to insulate the legs so the Red wire doesn't short to them, cna use 1.5/3mm heatshrink)
-13. Green LED (trim legs before soldering so the AVR23EB14 still sits flush
+12. Blue LED (you will probably want to insulate the legs so the Red wire doesn't short to them, can use 1.5/3mm heatshrink)
+13. Green LED (trim the legs before soldering so the AVR23EB14 can still sit flush)
 14. AVR32EB14!
-15. RED LED
+15. Red LED
 
 
 ## Trim VGA pins so:
