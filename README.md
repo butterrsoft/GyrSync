@@ -99,7 +99,7 @@ Mode 1-5, Mode S information table:
 * DTD’s are timings/resolutions reported to Windows/Linux if you turn EDID on. Plug and play, baby!
 * Windows gets shitty about delivering interlaced video in many cases.
 * If you push right up to the edges of any acceptable sync range, pass/fail detection is inconsistent and the output, along with your picture, will not be usable. Back off and move your modeline a notch or two inside the safe zone.
-* Remember that Vsync (FPS) must be 45-65Hz, or absent entirely, or output is blocked!
+* Vsync (FPS) must be 45-65Hz, or absent entirely, or output is blocked!
 
 There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is not used by any display, or at most was used in the early '80's as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
 
