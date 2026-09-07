@@ -124,7 +124,7 @@ Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, Mode ED
 | Passes | Per prev. mode | Per prev. mode | 15/25/31kHz | 15/25/31kHz | 15/25/31kHz |
 
 🔸 **Mode CS** - sync output method table: (On female DB15 output. Flip refers to the input sync polarity. Sync must be in range, still)
-| Method | M1 (default) | M2 | M3 | M4 | M5 | M6 | M7 |
+| Method | Mthd1 (default) | Mthd2 | Mthd3 | Mthd4 | Mthd5 | Mthd6 | Mthd7 |
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | Pin13 (H-/C-sync| Csync | Csync | Csync (no serr.) | pass | flip | pass | flip |
 | Pin14 (V-sync)| block | pass | pass | pass | pass | flip | flip |
