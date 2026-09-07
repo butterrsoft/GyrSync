@@ -164,6 +164,8 @@ Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eepr
 
 <img width="300" height="230" alt="CH341" src="https://github.com/user-attachments/assets/8f8ad10a-edc0-4bf3-a797-b003165cab01" />
 
+I wish i could have used USB or something, but the price and size goes up, and microcrontrollers with CCL and/or gates don't use USB :/
+
 ### Editing EDID files
 Edit the project EDID files using a free program like Deltacast, or sustitute your own EDID's, but keep the project filenames. The build needs all 6 EDID files named the same as the originals. The intent is to allow you to adjust the picture a bit or add your own DTD timings, monitor names, etc, and there is no protection from bad EDID files in the code, though it will still allow/block sync ranges as normal. If you do not add a CEA extension block or pad the EDID, the code will add an extension block making HDMI audio possible. If you get into trouble, restore the original EDID's.
 
