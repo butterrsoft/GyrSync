@@ -9,7 +9,7 @@ If you don't build in the following order, you will run into problems. Get some 
 1. Schottky
 2. Resistor for Green LED
 3. Oscillator
-4. Tactile switch (trim legs before osldering so they don't poke through at all, then insulate the pad closest to the top middle with kapton tape, so the USB-C socket doesn't short to ground)
+4. Tactile switch (trim legs before soldering so they don't poke through at all, then insulate the pad closest to the top middle with kapton tape, so the USB-C socket doesn't short it to ground)
 5. All other SMD components on the top side but NOT the 5k1 resistors
 6. USB-C (make sure not to ground the switch!)
 7. 5k1 resistors
