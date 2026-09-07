@@ -40,7 +40,7 @@ Modes 1-5 ──▶ Profile 1/2/3 ──▶ Mode S ──▶ Mode CS ──▶ M
                                  Mode H ──▶ Mode V ──▶ Mode FO
 ```
 
-Lockout Mode UI tables:
+### Lockout Mode UI tables:
 | Short press | No change |
 |:---|:---|
 | UI LED | Blinks mode, profile number |
@@ -50,7 +50,7 @@ Lockout Mode UI tables:
 | UI LED | Blinking | Dark |
 | Goes to | Mode 1-5 | Factory reset |
 
-Mode 1-5 UI tables:
+### Mode 1-5 UI tables:
 | Short press | Changes mode |
 |:---|:---|
 | UI LED | Blinks mode, profile number |
@@ -60,7 +60,7 @@ Mode 1-5 UI tables:
 | UI LED | 1 blnk | 2 blnks | 2 blnks | 2+2 blnks | Solid | Dark | Blinking | Dark |
 | Goes to | Profile 1 | Profile 2 | Profile 3 | Mode S | Mode CS | Mode ED | Lockout (in current mode) | Factory reset |
 
-Mode S UI tables:
+### Mode S UI tables:
 | Short press | Goes to Mode 1 |
 |:---|:---|
 | UI LED | Blinks Mode 1, profile number |
@@ -74,7 +74,7 @@ Mode S UI tables:
 | UI LED | Solid | Dark | Blinking |
 | Goes to | Mode H | Mode V | Mode FO |
 
-Adjustment Mode UI tables:
+### Adjustment Mode UI tables:
 | Mode | H, V | ED, FO | CS |
 |:---|:---|:---|:---|
 | Short press | Step adj. | Step adj. | Sync pass/combine to next method |
