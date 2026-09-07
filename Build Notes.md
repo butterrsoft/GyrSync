@@ -1,7 +1,7 @@
 ## CAUTION
-This build is a bitch. I will probably update with a larger through-hole PCB, or one that can be assembled for you by a fab, but this ius it for now...
+This build is a bitch. I will probably update with a larger through-hole PCB, or one that can be assembled for you by a fab, but this is it for now...
 
-Order PCb at 1.0mm thick or less. Make sure you get VGA plugs/sockets with straight, thin pins. NOT solder pins with the cup-shape. Hard to find, but required here.
+Order PCB at 1.0mm thick or less. Make sure you get VGA plugs/sockets with straight, thin pins. NOT solder pins with the cup-shape. Hard to find, but required here.
 
 If you don't build in the following order, you will run into problems. Get some kapton tape. Go slowly. Check continuity to make sure you haven't shorted anything at each step. Measure twice, cut once.
 
