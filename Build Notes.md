@@ -1,5 +1,5 @@
 ## CAUTION
-This build is a bitch. I will probably update with a larger through-hole PCB, or one that can be assembled for you by a fab, but this is it for now...
+This build is a bitch. I will probably update with a second, larger, through-hole PCB, or one that can be assembled for you by a fab, but this is it for now...
 
 Order PCB at 1.0mm thick (or less, and edit the case body step file). Make sure you get VGA plugs/sockets with straight, thin pins. NOT solder pins with the cup-shape. Hard to find, but required here.
 
