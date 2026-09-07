@@ -123,11 +123,11 @@ Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, Mode ED
 |:---|:---|:---|:---|:---|:---|
 | Passes | Per prev. mode | Per prev. mode | 15/25/31kHz | 15/25/31kHz | 15/25/31kHz |
 
-🔸 **Mode CS** - sync output method table: (H-/C-sync on Pin 13, V-sync on Pin 14 of the female DB15 output. Flip refers to the input sync polarity. Sync must be in range, still)
+🔸 **Mode CS** - sync output method table: (On female DB15 output. Flip refers to the input sync polarity. Sync must be in range, still)
 | Method | M1 (default) | M2 | M3 | M4 | M5 | M6 | M7 |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| Pin13 | Csync | Csync | Csync (no serr.) | pass | flip | pass | flip |
-| Pin14 | block | pass | pass | pass | pass | flip | flip |
+| Pin13 (H-/C-sync| Csync | Csync | Csync (no serr.) | pass | flip | pass | flip |
+| Pin14 (V-sync)| block | pass | pass | pass | pass | flip | flip |
 
 🔸 **Mode ED** - moves the h-pos and h-size in the EDID. Control defaults to h-pos/left, and when you hold for 8s goes to h-width/narrower. Changes affect *all* DTD’s over the current profile, across all modes. Different profiles can have different Mode ED settings. Changes do not show on the CRT as you make them - you must hit “Detect” under Windows Display Settings to see any changes, or, better, hot plug the dongle while USB-powered.
 
