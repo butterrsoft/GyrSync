@@ -97,7 +97,7 @@ Mode 1-5, Mode S information table:
 | DTD 3 | 720x480i | — | 720x480i | — | 720x480i | 720x480i |
 
 * DTD’s are timings/resolutions reported to Windows/Linux if you turn EDID on. Plug and play, baby!
-* Windows gets shitty about delivering interlaced in many cases.
+* Windows gets shitty about delivering interlaced video in many cases.
 * If you push right up to the edges of any acceptable sync range, pass/fail detection is inconsistent and the output, along with your picture, will not be usable. Back off and move your modeline a notch or two inside the safe zone.
 * Remember that Vsync (FPS) must be 45-65Hz, or absent entirely, or output is blocked!
 
