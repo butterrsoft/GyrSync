@@ -129,7 +129,7 @@ Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, Mode ED
 | Pin13 | Csync | Csync | Csync (no serr.) | pass | flip | pass | flip |
 | Pin14 | block | pass | pass | pass | pass | flip | flip |
 
-🔸 **Mode ED** - moves the h-pos and h-size in the EDID. Control defaults to h-pos/left, and when you hold for 8s goes to h-width/narrower. Changes affect *all* DTD’s over the current profile, across all modes. Different profiles can have different Mode ED settings. Changes do not show on the CRT as you make them - you must hit “Detect” under Windows Display Settings to see any changes, or, better, hot plug dongle while USB-powered.
+🔸 **Mode ED** - moves the h-pos and h-size in the EDID. Control defaults to h-pos/left, and when you hold for 8s goes to h-width/narrower. Changes affect *all* DTD’s over the current profile, across all modes. Different profiles can have different Mode ED settings. Changes do not show on the CRT as you make them - you must hit “Detect” under Windows Display Settings to see any changes, or, better, hot plug the dongle while USB-powered.
 
 🔸 **Mode H** - moves h-pos. *Shimmers*, as the AVR32EB14 is only granular to 50ns. Better to adjust the source, the CRT, or use Mode ED.
 
