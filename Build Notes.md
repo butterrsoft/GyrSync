@@ -15,7 +15,7 @@ If you don't build in the following order, you will run into problems. Get some 
 7. 5k1 resistors
 8. All sMD components on the lower side, but not the AVR23EB14 main IC
 9. male/female DB15 3-row plug/socket (making sure to trim pins as below)
-10. RGB wires (i like 28AWG solid-core high-temp wire for this)
+10. RGB wires (I like 28AWG solid-core high-temp wire for this). Connect pin1 to pin1, pin2 to pin2, pin3 to pin3.
 11. 1.27mm 2-pin header
 12. Blue LED (you will probably want to insulate the legs so the Red wire doesn't short to them, cna use 1.5/3mm heatshrink)
 13. Green LED (trim legs before soldering so the AVR23EB14 still sits flush
