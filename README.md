@@ -101,7 +101,7 @@ Mode 1-5, Mode S information table:
 * If you push right up to the edges of any acceptable sync range, pass/fail detection is inconsistent and the output, along with your picture, will not be usable. Back off and move your modeline a notch or two inside the safe zone.
 * Vsync (FPS) must be 45-65Hz, or absent entirely, or output is blocked!
 
-There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is not used by any display, or at most was used in the early '80's as monitor ID bit 0 by tying it to ground, but you might try removing the jumper if the dongle seems stuck in some sort of loop.
+There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is no longer used by any display, but many/most cables tie it to ground. Leave the jumper off during normal use or the dongle won't boot if left in your setup (both red and green LED's will light dimly).
 
 ### 🔸 Mode S - special
 Mode S passes 15kHz as normal, but takes 31kHz and halves it to make it 15kHz also - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
@@ -158,7 +158,7 @@ Programming is via UPDI 3-wire serial protocol. Unplug from your GPU or VGA sour
 
 <img width="600" height="285" alt="UPDI" src="https://github.com/user-attachments/assets/4fc254f3-601a-4799-928e-6fe3038ee7a7" />
 
-On the Gyrsync, stick pins into the VGA female end – pin 9 is 5V, pin 6, 7 or 8 for GND, and pin 11 for UPDI. Remember the 1.27mm UPDI jumper, if you removed it. Then open a gitbash (in any right-click context-menu) where you have the project files and type `make clean` then `make TOOLDIR="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/" AVRDUDE="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/avrdude.exe" flash PORT=COM6` remembering to check those paths and com port.
+On the Gyrsync, stick pins into the VGA female end – pin 9 is 5V, pin 6, 7 or 8 for GND, and pin 11 for UPDI. Remember the 1.27mm UPDI jumper, or bridge the pins in a reversible fashion. Then open a gitbash (in any right-click context-menu) where you have the project files and type `make clean` then `make TOOLDIR="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/" AVRDUDE="C:/path/to/avr-gcc-16.1.0-x64-windows/bin/avrdude.exe" flash PORT=COM6` remembering to check those paths and com port.
 
 Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eeprom programmers like below (just flip the jumper to TTL and use the pins as marked on the reverse). I did have trouble with a CH340-based cable though.
 
