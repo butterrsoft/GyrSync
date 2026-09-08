@@ -24,10 +24,10 @@ I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](ht
 * Headless UI operation possible, for the most part.
 * Diagnostic tools beyond the simple pass/fail sync rate indication, which itself is nothing to sneeze at!
 
-### Caveats
+### Read me first
 Use a single power source wherever possible - try your VGA port first. If the VGA port won't power your GyrSync, use a USB-C cable. *Don't* try to power other devices from the USB-C port on the Gyrsync. The Gyrsync has protection, but if something shorts you don't want to hurt anything.
 
-There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is no longer used by any display, but many/most cables tie it to ground. Leave the jumper off during normal use or the dongle won't boot if left in your setup (both red and green LED's will light dimly).
+There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is no longer used by any display, but many/most cables tie it to ground. Leave the jumper off during normal use or the dongle mightn't boot if left in your setup (both red and green LED's will light dimly).
 
 ## UI Navigation
 UI is one button and one LED. Single button-presses change basic modes and adjust settings. Button-holds are timed to move between secondary modes, activating on release. Set the dongle as you want, then lock it so you can’t bump anything.
