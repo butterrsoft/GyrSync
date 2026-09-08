@@ -6,7 +6,7 @@ Order PCB at 1.0mm thick (or less, and edit the case body step file). Make sure 
 If you don't build in the following order, you will run into problems. Get some kapton tape. Go slowly. Check continuity to make sure you haven't shorted anything at each step. Work out *why* you are trimming each leg or VGA pin before doing so. Measure twice, cut once.
 
 ## Solder components in this order:
-1. Schottky
+1. Both Schottky diodes
 2. Resistor for Green LED
 3. Oscillator
 4. Tactile switch (trim legs before soldering so they don't poke through at all, then insulate the pad closest to the top middle with kapton tape, so the USB-C socket doesn't short it to ground)
