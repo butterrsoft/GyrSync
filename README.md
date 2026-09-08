@@ -72,7 +72,7 @@ Modes 1-5 ──▶ Profile 1/2/3 ──▶ Mode S ──▶ Mode CS ──▶ M
 
 | Double press | Toggle EDID on/off |
 |:---|:---|
-| UI LED | Accel/decel pulses |
+| UI LED | Accel/decel pulses, respectively |
 
 | Hold, release | 2s | 4s | 6s |
 |:---|:---|:---|:---|
