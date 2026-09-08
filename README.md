@@ -6,7 +6,7 @@ CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480
 
 ((picture))
 
-Powered via your VGA port, or any USB-C cable - or both because USB cannot backfeed VGA. Updates/reprograms via a single Gitbash Make command through an $8USD UPDI friend.
+Powered via your VGA port, or any USB-C cable. Updates/reprograms via a single Gitbash Make command through an $8USD UPDI friend.
 
 ### Acknowledgments/Confessions:
 I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](https://hackaday.io/project/165634-the-ultimate-vga-to-scart-adapter) and got carried away. Code by Claude, and, yes, I am embarrassed by that. All free and open-source, but who doesn't like seeing their name in print? 😆
@@ -23,6 +23,11 @@ I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](ht
 * Lockout mode swallows stray button presses.
 * Headless UI operation possible, for the most part.
 * Diagnostic tools beyond the simple pass/fail sync rate indication, which itself is nothing to sneeze at!
+
+### Caveats
+Use a single power source wherever possible - try your VGA port first. If the VGA port won't power your GyrSync, use a USB-C cable. *Don't* try to power other devices from the USB-C port on the Gyrsync. The Gyrsync has protection, but if something shorts you don't want to hurt anything.
+
+There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is no longer used by any display, but many/most cables tie it to ground. Leave the jumper off during normal use or the dongle won't boot if left in your setup (both red and green LED's will light dimly).
 
 ## UI Navigation
 UI is one button and one LED. Single button-presses change basic modes and adjust settings. Button-holds are timed to move between secondary modes, activating on release. Set the dongle as you want, then lock it so you can’t bump anything.
@@ -100,6 +105,7 @@ Mode 1-5, Mode S information table:
 * Windows gets shitty about delivering interlaced video in many cases.
 * If you push right up to the edges of any acceptable sync range, pass/fail detection is inconsistent and the output, along with your picture, will not be usable. Back off and move your modeline a notch or two inside the safe zone.
 * Vsync (FPS) must be 45-65Hz, or absent entirely, or output is blocked!
+
 
 There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is no longer used by any display, but many/most cables tie it to ground. Leave the jumper off during normal use or the dongle won't boot if left in your setup (both red and green LED's will light dimly).
 
