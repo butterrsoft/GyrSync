@@ -13,7 +13,7 @@ If you don't build in the following order, you will run into problems. Get some 
 5. All other SMD components on the top side but NOT the 5k1 resistors
 6. USB-C (make sure not to ground the switch!)
 7. 5k1 resistors
-8. All sMD components on the lower side, but not the AVR23EB14 main IC
+8. All SMD components on the lower side, but not the AVR23EB14 main IC
 9. Male/female DB15 3-row plug/socket (making sure to trim pins as below)
 10. RGB wires (I like 28AWG solid-core high-temp wire for this). Connect pin1 to pin1, pin2 to pin2, pin3 to pin3.
 11. 1.27mm 2-pin header
