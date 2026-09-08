@@ -16,7 +16,7 @@ I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](ht
 * Vsync passes at 45-65Hz. But also when not present, so you can work only with H-sync if desired.
 * Great for proving you're outputting the right video mode - comes in handy during system setup!
 * VGA (TTL) RGBHV input only (Windows, Linux, MiSTer, HDMI-to-VGA) via DB15 3-row male plug, output via female socket.
-* EDID can be turned on/off, and adjusted for H-size and H-pos. Or just reprogrammed.
+* EDID can be turned on/off, and adjusted for H-size and H-pos. Or reprogrammed completely.
 * H-pos, V-pos and field-offset direct adjustment.
 * C-sync output with or without serration, separate H- and V-sync, sync polarity pass/flip.
 * Three user profiles can hold different settings. 
