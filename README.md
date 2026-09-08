@@ -16,8 +16,8 @@ I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](ht
 * Vsync passes at 45-65Hz. But also when not present, so you can work only with H-sync if desired.
 * Great for proving you're outputting the right video mode - comes in handy during system setup!
 * VGA (TTL) RGBHV input only (Windows, Linux, MiSTer, HDMI-to-VGA) via DB15 3-row male plug, output via female socket.
-* EDID can be turned on/off, and adjusted.
-* H-pos, V-pos and field-offset adjustments.
+* EDID can be turned on/off, and adjusted for H-size and H-pos. Or just reprogrammed.
+* H-pos, V-pos and field-offset direct adjustment.
 * C-sync output with or without serration, separate H- and V-sync, sync polarity pass/flip.
 * Three user profiles can hold different settings. 
 * Lockout mode swallows stray button presses.
@@ -122,7 +122,7 @@ Mode S sync report table:
 ### Adjustment modes
 Adjustments are possible without a picture – power the dongle from any USB-C cable. The UI blinks SOS/cannot-adjust in only three scenarios: Mode FO if no interlaced mode is detected (progressive, or just missing vsync), Mode ED if EDID is off, Mode V if the source FPS is unstable.
 
-Adj. modes time out back to the mode you came from in 20s, or 30s for Mode ED. Same happens on reboot. Unsaved changes are discarded.
+Adj. modes time-out back to the mode you came from in 20s, or 30s for Mode ED. Same happens on reboot. Unsaved changes are discarded.
 
 Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, then Mode ED is still at 25kHz.)
 |  | Mode CS | Mode ED | Mode H | Mode V | Mode FO |
@@ -170,10 +170,10 @@ Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eepr
 
 <img width="300" height="230" alt="CH341" src="https://github.com/user-attachments/assets/8f8ad10a-edc0-4bf3-a797-b003165cab01" />
 
-I wish i could have used USB or something, but the price and size goes up, and microcrontrollers with CCL and/or gates don't use USB :/
+I wish i could have used USB or something, but the price and size goes up, and microcrontrollers with CCL and/xor gates don't use USB :/
 
 ### Editing EDID files
-Edit the project EDID files using a free program like Deltacast, or sustitute your own EDID's, but keep the project filenames. The build needs all 6 EDID files named the same as the originals. The intent is to allow you to adjust the picture a bit or add your own DTD timings, monitor names, etc, and there is no protection from bad EDID files in the code, though it will still allow/block sync ranges as normal. If you do not add a CEA extension block or pad the EDID, the code will add an extension block making HDMI audio possible. If you get into trouble, restore the original EDID's.
+Edit the project EDID files using a free program like Deltacast, or substitute your own EDID's, but keep the project filenames. The build needs all 6 EDID files named the same as the originals. The intent is to allow you to adjust the picture a bit or add your own DTD timings, monitor names, etc, and there is no protection from bad EDID files in the code, though it will still allow/block sync ranges as normal. If you do not add a CEA extension block or pad the EDID, the code will add an extension block making HDMI audio possible. If you get into trouble, restore the original EDID's.
 
 Linux needs separate EDID's as it interprets the interlaced descriptor differently. 480i on Windows = 240i@60Hz, on Linux = 480i@30Hz. If you don't use interlaced modes you won't notice.
 
