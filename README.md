@@ -58,7 +58,7 @@ Modes 1-5 ──▶ Profile 1/2/3 ──▶ Mode S ──▶ Mode CS ──▶ M
 ### Mode 1-5 UI tables:
 | Short press | Changes mode |
 |:---|:---|
-| UI LED | Blinks mode, profile number |
+| UI LED | Blinks new mode, profile number |
 
 | Hold, release | 2s | 4s | 6s | 8s | 11s | 13s | 16s | 25s |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
