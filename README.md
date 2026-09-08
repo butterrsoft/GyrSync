@@ -63,7 +63,7 @@ Modes 1-5 ──▶ Profile 1/2/3 ──▶ Mode S ──▶ Mode CS ──▶ M
 | Hold, release | 2s | 4s | 6s | 8s | 11s | 13s | 16s | 25s |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | UI LED | 1 blnk | 2 blnks | 2 blnks | 2+2 blnks | Solid | Dark | Blinking | Dark |
-| Goes to | Profile 1 | Profile 2 | Profile 3 | Mode S | Mode CS | Mode ED | Lockout (in current mode) | Factory reset |
+| Goes to | Profile 1 | Profile 2 | Profile 3 | Mode S | Mode CS | Mode ED | Lockout (at current settings) | Factory reset |
 
 ### Mode S UI tables:
 | Short press | Goes to Mode 1 |
