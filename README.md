@@ -2,14 +2,11 @@
 
 <img width="2000" height="340" alt="Gyr5" src="https://github.com/user-attachments/assets/af9bb90f-d9c1-43df-99e5-139352f99b71" />
 
-CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480p/31kHz. With EDID, h-pos, v-pos, field-offset, and selectable sync pass/combine/polarity methods. Takes VGA/RGBHV input. Outputs C-sync on VGA pin 13 (or separate sync, if desired) when safe. Otherwise the RED led comes on and sync output is blocked. RGB still passes through, which is harmless on screen.
-
-((picture))
+CRT TV/monitor protection and diagnostic dongle for 240p/15kHz, 25kHz and/or 480p/31kHz. With EDID, h-pos, v-pos, field-offset, and selectable sync pass/combine/polarity methods. Takes VGA/RGBHV input. Outputs C-sync on VGA pin 13 (or separate sync, if desired) when safe. Otherwise the Red led comes on and sync output is blocked. RGB still passes through, which is harmless on screen.
 
 Powered via your VGA port, or any USB-C cable. Updates/reprograms via a single Gitbash Make command through an $8USD UPDI friend.
 
-### Acknowledgments/Confessions:
-I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](https://hackaday.io/project/165634-the-ultimate-vga-to-scart-adapter) and got carried away. Code by Claude, and, yes, I am embarrassed by that. All free and open-source, but who doesn't like seeing their name in print? 😆
+<img width="3515" height="1622" alt="Gyrsync_x2" src="https://github.com/user-attachments/assets/982a7636-8f78-4470-845a-da0acb74eb7d" />
 
 ## Primary features
 * Monitor sync protection at 15kHz and/or 25kHz and/or 31kHz.
@@ -24,10 +21,15 @@ I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](ht
 * Headless UI operation possible, for the most part.
 * Diagnostic tools beyond the simple pass/fail sync rate indication, which itself is nothing to sneeze at!
 
+<img width="3000" height="730" alt="Plan+test" src="https://github.com/user-attachments/assets/9b727867-fdf2-4eab-9090-752d94e9608e" />
+
 ### Read me first
 Use a single power source wherever possible - try your VGA port first. If the VGA port won't power your GyrSync, use a USB-C cable. *Don't* try to power other devices from the USB-C port on the Gyrsync. The Gyrsync has protection, but if something shorts you don't want to hurt anything.
 
 There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is no longer used by any display, but many/most cables tie it to ground. Leave the jumper off during normal use or the dongle mightn't boot if left in your setup (both red and green LED's will light dimly).
+
+### Acknowledgments/Confessions:
+I wanted to update Gambaman’s game-changing [Ultimate VGA to Scart Adapter](https://hackaday.io/project/165634-the-ultimate-vga-to-scart-adapter) and got carried away. Code by Claude, and, yes, I am embarrassed by that. All free and open-source, but who doesn't like seeing their name in print? 😆
 
 ## UI Navigation
 UI is one button and one LED. Single button-presses change basic modes and adjust settings. Button-holds are timed to move between secondary modes, activating on release. Set the dongle as you want, then lock it so you can’t bump anything.
