@@ -123,7 +123,7 @@ Mode S sync report table:
 ### Adjustment modes
 Adjustments are possible without a picture – power the dongle from any USB-C cable. The UI blinks SOS/cannot-adjust in only three scenarios: Mode FO if no interlaced mode is detected (progressive, or just missing vsync), Mode ED if EDID is off, Mode V if the source FPS is unstable.
 
-Adj. modes time-out back to the mode you came from in 20s, or 30s for Mode ED. Same happens on reboot. Unsaved changes are discarded.
+Adj. modes fall back to the mode you came from after 20s inactivity, or 30s for Mode ED. Same happens on reboot. Unsaved changes are discarded.
 
 Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, then Mode ED is still at 25kHz.)
 |  | Mode CS | Mode ED | Mode H | Mode V | Mode FO |
