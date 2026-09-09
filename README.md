@@ -110,9 +110,6 @@ Mode 1-5, Mode S information table:
 * If you push right up to the edges of any acceptable sync range, pass/fail detection is inconsistent and the output, along with your picture, will not be usable. Back off and move your modeline a notch or two inside the safe zone.
 * Vsync (FPS) must be 45-65Hz, or absent entirely, or output is blocked!
 
-
-There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is no longer used by any display, but many/most cables tie it to ground. Leave the jumper off during normal use or the dongle won't boot if left in your setup (both red and green LED's will light dimly).
-
 ### 🔸 Mode S - special
 Mode S passes 15kHz as normal, but takes 31kHz and halves it to make it 15kHz also - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
 
