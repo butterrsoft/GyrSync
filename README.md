@@ -36,7 +36,7 @@ UI is one button and one LED. Single button-presses change basic modes and adjus
 
 Dongle starts at Factory Reset – Mode 1, Profile 1, button locked out, Csync output, EDID off, all adjustments at default.
 
-Look at all the tables, but when adjusting keep this flowchart up and remember that when holding the button pressed to move through the UI, the LED always changes state somehow as you move to the next step.
+Look at all the tables, but keep this flowchart up during use and remember that when holding the button down to move through the UI, the LED always gives some indication as you move to the next step.
 
 UI topology:
 ```text
