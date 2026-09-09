@@ -85,7 +85,7 @@ Modes 1-5 ──▶ Profile 1/2/3 ──▶ Mode S ──▶ Mode CS ──▶ M
 | Mode | H, V | ED, FO | CS |
 |:---|:---|:---|:---|
 | Short press | Step adj. | Step adj. | Sync pass/combine to next method |
-| UI LED | Long blink middle and ends only | Rate blink slower in middle, faster at ends. Long blink middle and ends. | Pulses method number |
+| UI LED | Long blink middle and ends only | Blink rate slower in middle, faster at ends. Long blink middle and ends. | Pulses method number |
 
 | Hold | 2s | 4s | 6s | 8s (Mode ED only) |
 |:---|:---|:---|:---|:---|
