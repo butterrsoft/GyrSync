@@ -24,7 +24,7 @@ Powered via your VGA port, or any USB-C cable. Updates/reprograms via a single G
 <img width="3000" height="730" alt="Plan+test" src="https://github.com/user-attachments/assets/9b727867-fdf2-4eab-9090-752d94e9608e" />
 
 ### Read me first
-Use a single power source wherever possible - try your VGA port first. If the VGA port won't power your GyrSync, use a USB-C cable. *Don't* try to power other devices from the USB-C port on the Gyrsync. The Gyrsync has protection, but if something shorts you don't want to hurt anything.
+Use a single power source wherever possible - try your VGA port first. If neither LED lights up, use a USB-C cable. *Don't* try to power other devices from the USB-C port on the Gyrsync. The Gyrsync has protection, but if something shorts you don't want to hurt anything.
 
 There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VGA Pin 11 on the female VGA output side. This pin is no longer used by any display, but many/most cables tie it to ground. Leave the jumper off during normal use or the dongle mightn't boot if left in your setup (both red and green LED's will light dimly).
 
