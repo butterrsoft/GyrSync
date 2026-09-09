@@ -114,7 +114,7 @@ There is one 1.27mm jumper inside the Gyrsync - allowing UPDI programming via VG
 ### 🔸 Mode S - special
 Mode S passes 15kHz as normal, but takes 31kHz and halves it to make it 15kHz also - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
 
-If there is no user activity, Mode S reports sync status each 5s (but still blocks sync out of range).
+If there is no user activity, Mode S diagnoses sync status each 5s (but still blocks sync out of range). Will tell you if your cable is broken or wrong, or just that your system has gone to sleep.
 
 Mode S sync report table:
 | UI LED | 1 blink | 2 blinks | 3 blinks | Does nothing |
