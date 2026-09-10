@@ -10,7 +10,7 @@ Powered via your VGA port, or any USB-C cable. Updates/reprograms via a single G
 
 ## Primary features
 * Monitor sync protection at 15kHz and/or 25kHz and/or 31kHz.
-* Vsync passes at 45-65Hz. But also when not present, so you can work only with H-sync if desired.
+* Vsync works at 45-65Hz input. But also when not present, so you can work only with H-sync if desired.
 * Great for proving you're outputting the right video mode - comes in handy during system setup!
 * VGA (TTL) RGBHV input only (Windows, Linux, MiSTer, HDMI-to-VGA) via DB15 3-row male plug, output via female socket.
 * EDID can be turned on/off, and adjusted for H-size and H-pos. Or reprogrammed completely.
