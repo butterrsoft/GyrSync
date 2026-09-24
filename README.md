@@ -57,7 +57,7 @@ Modes 1-5 ──▶ Profile 1/2/3 ──▶ Mode S ──▶ Mode CS ──▶ M
 | Hold, release | 3s | 10s |
 |:---|:---|:---|
 | UI LED | Blinking | Dark |
-| Goes to | Mode 1-5 | Factory reset |
+| Goes to | Mode 1-5, lockout removed | Factory reset |
 
 ### Mode 1-5 UI tables:
 | Short press | Changes mode |
