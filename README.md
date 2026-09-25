@@ -126,7 +126,7 @@ Adjustments are possible without a picture – power the dongle from any USB-C c
 Adj. modes fall back to the mode you came from after 20s inactivity, or 30s for Mode ED. Same happens on reboot. Unsaved changes are discarded. After the long-blink at the end of an adjustment range, further presses move back in the other direction. The LED also long blinks at the default position.
 
 Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, then Mode ED is still at 25kHz.)
-|  | Mode CS | Mode ED | Mode H | Mode V | Mode FO |
+| Mode | Mode CS | Mode ED | Mode H | Mode V | Mode FO |
 |:---|:---|:---|:---|:---|:---|
 | Passes | Per prev. mode | Per prev. mode | 15/25/31kHz | 15/25/31kHz | 15/25/31kHz |
 
