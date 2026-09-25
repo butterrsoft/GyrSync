@@ -174,7 +174,7 @@ Most USB-to-serial adapters should work, like a CP2102, or even those CH341 eepr
 I wish i could have used USB or something, but the price and size goes up, and microcrontrollers with CCL and/xor gates don't use USB :/
 
 ### Editing EDID files (for programming)
-Edit the project EDID files using a free program like Deltacast, or substitute your own EDID's, but keep the project filenames. The build needs all 6 EDID files named the same as the originals. The intent is to allow you to adjust the picture a bit or add your own DTD timings, monitor names, etc, and there is no protection from bad EDID files in the code, though it will still allow/block sync ranges as normal. If you do not add a CEA extension block or pad the EDID, the code will add an extension block making HDMI audio possible. If you get into trouble, restore the original EDID's.
+Edit the project EDID files using a free program like Deltacast, or substitute your own EDID's, but keep the project filenames. The build needs all 6 EDID files named the same as the originals. The intent is to allow you to adjust the picture a bit or add your own DTD timings, monitor names, etc. There is no protection from bad EDID files in the code, though it will still allow/block sync ranges as normal. If you do not add a CEA extension block or pad the EDID, the code will add an extension block making HDMI audio possible. If you get into trouble, restore the original EDID's.
 
 Linux needs separate EDID's as it interprets the interlaced descriptor differently. 480i on Windows = 240i@60Hz, on Linux = 480i@30Hz. If you don't use interlaced modes you won't notice.
 
