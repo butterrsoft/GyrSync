@@ -105,7 +105,7 @@ Mode 1-5, Mode S information table:
 | DTD 2 | 1280x240p | — | 1280x240p | — | 496x384p | 1280x240p |
 | DTD 3 | 720x480i | — | 720x480i | — | 720x480i | 720x480i |
 
-* DTD’s are timings/resolutions reported to Windows/Linux if you turn EDID on. Plug and play, baby! (In theory, at least, because Windows can be finicky and I'm waiting for more results from my testers. My RTX 5070, 980ti, old NV Quadro, and Radeon 5450's work fine for 640x240p. My R7 360's do not.)
+* DTD’s are timings/resolutions reported to Windows/Linux if you turn EDID on. Plug and play, baby! (In theory, at least, because Windows can be finicky and I'm waiting for more results from my testers. My RTX 5070, 980ti, old NV Quadro, and Radeon 5450's worked for 640x240p by simply plugging in the GyrSync after turning on EDID. My R7 360's do not.)
 * Windows gets shitty about delivering interlaced video at low res in almost all cases.
 * If your video mode pushes right up to the edges of any acceptable sync range, pass/fail detection is inconsistent and the output, along with your picture, will not be usable. Back off and move your modeline a notch or two inside the safe zone.
 * Vsync (FPS) must be 45-65Hz, or absent entirely, or all output is blocked!
