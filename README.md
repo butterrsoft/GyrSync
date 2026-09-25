@@ -105,10 +105,10 @@ Mode 1-5, Mode S information table:
 | DTD 2 | 1280x240p | — | 1280x240p | — | 496x384p | 1280x240p |
 | DTD 3 | 720x480i | — | 720x480i | — | 720x480i | 720x480i |
 
-* DTD’s are timings/resolutions reported to Windows/Linux if you turn EDID on. Plug and play, baby! (In theory, at least, because Windows can be finicky and I'm waiting for more results from my testers.)
-* Windows gets shitty about delivering interlaced video in many cases.
-* If you push right up to the edges of any acceptable sync range, pass/fail detection is inconsistent and the output, along with your picture, will not be usable. Back off and move your modeline a notch or two inside the safe zone.
-* Vsync (FPS) must be 45-65Hz, or absent entirely, or output is blocked!
+* DTD’s are timings/resolutions reported to Windows/Linux if you turn EDID on. Plug and play, baby! (In theory, at least, because Windows can be finicky and I'm waiting for more results from my testers. My RTX 5070, 980ti, old NV Quadro, and Radeon 5450's work fine for 640x240p. My R7 360's do not.)
+* Windows gets shitty about delivering interlaced video at low res in almost all cases.
+* If your video mode pushes right up to the edges of any acceptable sync range, pass/fail detection is inconsistent and the output, along with your picture, will not be usable. Back off and move your modeline a notch or two inside the safe zone.
+* Vsync (FPS) must be 45-65Hz, or absent entirely, or all output is blocked!
 
 ### 🔸 Mode S - special
 Mode S passes 15kHz as normal, but takes 31kHz and halves it to make it 15kHz also - side-by-side images but at true 15kHz. This lets you use Safe Mode, or get out of trouble if Windows keeps grabbing 480p and pissing you off.
@@ -153,7 +153,7 @@ Extended Display Identification Data. Your OS reads it from any monitor and then
 * Turn off scaling in your GPU settings – Nvidia CP has it under desktop size & position – no scaling.
 * Some HDMI-to-VGA dongles may mux-in EDID, which is ok, or simply provide their own, which is not.
 * The EDID's allow audio over HDMI - change sound output in Windows if you need to.
-* Something like crt_emudriver, CRU, or setting a cmdline.txt EDID in Linux, can override any physical EDID, and you will not see the GyrSync or it’s modelines listed anywhere. (Sync-protection and other features will still work as normal)
+* Something like crt_emudriver, CRU, or setting a cmdline.txt EDID in Linux, can override any physical EDID, and you won't see the GyrSync or it’s modelines listed anywhere. (Sync-protection and other features will still work as normal)
 
 HDMI-to-VGA adapters can be great, but most cheap ones are now complete shit. At time of writing, [this cheap one](https://www.aliexpress.com/item/32976152001.html?spm=a2g0o.order_list.order_list_main.30.49cd1802Jc2KAH) works with the GyrSync, and probably with 240p in general :) (You need the flat cable version with audio). To use this particular converter you need a monitor plugged in, but not necessarily turned on - it must be detecting via the 75R terminations or something.
 
