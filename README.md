@@ -36,9 +36,12 @@ UI is one button and one LED. Single button-presses change basic modes and adjus
 
 Dongle starts at Factory Reset – Mode 1, Profile 1, button locked out, Csync output, EDID off, all adjustments at default.
 
-[Introduction and UI Navigation video](https://www.youtube.com/watch?v=2u9bSRtD6DU) Use the timestamps in the video if you need to. Keep the flowchart below handy during use and remember that when holding the button down to move through the UI, the LED always gives some indication as you move to the next step.
+[Introduction and UI Navigation video](https://www.youtube.com/watch?v=2u9bSRtD6DU) Use the timestamps in the video if you need to. Keep the flowcharts below handy during use and remember that when holding the button down to move through the UI, the LED always gives some indication as you move to the next step.
 
-UI topology:
+UI full topology:
+<img width="1107" height="925" alt="flowchart_Zeb" src="https://github.com/user-attachments/assets/d6d4abb8-dfc7-4385-8192-ae2a8d4da9a0" />
+
+UI simple topology:
 ```text
 Lockout ──▶ Factory Reset
    │
