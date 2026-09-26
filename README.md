@@ -36,7 +36,7 @@ UI is one button and one LED. Single button-presses change basic modes and adjus
 
 Dongle starts at Factory Reset – Mode 1, Profile 1, button locked out, Csync output, EDID off, all adjustments at default.
 
-Keep this flowchart up during use and remember that when holding the button down to move through the UI, the LED always gives some indication as you move to the next step.
+[Introduction and UI Navigation video](https://www.youtube.com/watch?v=2u9bSRtD6DU) Use the timestamps in the video if you need to. Keep the flowchart below handy during use and remember that when holding the button down to move through the UI, the LED always gives some indication as you move to the next step.
 
 UI topology:
 ```text
@@ -148,14 +148,14 @@ Adj. mode h-sync pass table: (Prev. mode = if you were in Mode 4, 25kHz, then Mo
 Extended Display Identification Data. Your OS reads it from any monitor and then sends the video timing mode the monitor asked for. The GyrSync transmits 15kHz, 25kHz and 31kHz timings based on how you set it. Modern OS’s are finicky, won’t do interlaced, but *should* grab the base 240p mode from the 15kHz timings and simply display it. Or 384p/480p depending on what you set. Wait for the green LED on the Gyrsync before plugging in your CRT.
 
 **Troubleshooting EDID**
-* Make sure EDID on the GyrSync is turned on.
-* Windows Display Settings > Advanced Display Settings for Desktop Resolution vs Active Signal Resolution.
-* Turn off scaling in your GPU settings – Nvidia CP has it under desktop size & position – no scaling.
+* [Go into Mode S](https://www.youtube.com/watch?v=2u9bSRtD6DU&t=462s) and [turn on EDID](https://www.youtube.com/watch?v=2u9bSRtD6DU&t=543s)
+* Windows Display Settings > Advanced Display Settings for Desktop Resolution vs Active Signal Resolution. [Turn off scaling in your GPU settings](https://www.youtube.com/watch?v=IokpZT4ZYq4)
+* Some older GPU's, OSes, or HDMI-to-VGA adapters may need a monitor plugged in, but not necessarily turned on, for the GyrSync to be detected. 
 * Some HDMI-to-VGA dongles may mux-in EDID, which is ok, or simply provide their own, which is not.
 * The EDID's allow audio over HDMI - change sound output in Windows if you need to.
 * Something like crt_emudriver, CRU, or setting a cmdline.txt EDID in Linux, can override any physical EDID, and you won't see the GyrSync or it’s modelines listed anywhere. (Sync-protection and other features will still work as normal)
 
-HDMI-to-VGA adapters can be great, but most cheap ones are now complete shit. At time of writing, [this cheap one](https://www.aliexpress.com/item/32976152001.html?spm=a2g0o.order_list.order_list_main.30.49cd1802Jc2KAH) works with the GyrSync, and probably with 240p in general :) (You need the flat cable version with audio). To use this particular converter you need a monitor plugged in, but not necessarily turned on - it must be detecting via the 75R terminations or something.
+HDMI-to-VGA adapters can be great, but most cheap ones are now complete shit. At time of writing, [this cheap one](https://www.aliexpress.com/item/32976152001.html?spm=a2g0o.order_list.order_list_main.30.49cd1802Jc2KAH) works with the GyrSync, and probably with 240p in general :) (You need the flat cable version with audio). To use this particular converter you need a monitor plugged in, as above.
 
 
 ## Reprogramming:
