@@ -39,7 +39,8 @@ Dongle starts at Factory Reset – Mode 1, Profile 1, button locked out, Csync o
 [Introduction and UI Navigation video](https://www.youtube.com/watch?v=2u9bSRtD6DU) Use the timestamps in the video if you need to. Keep the flowcharts below handy during use and remember that when holding the button down to move through the UI, the LED always gives some indication as you move to the next step.
 
 UI full topology:
-<img width="1107" height="925" alt="flowchart_Zeb" src="https://github.com/user-attachments/assets/d6d4abb8-dfc7-4385-8192-ae2a8d4da9a0" />
+<img width="1107" height="925" alt="flowchart_Zeb_grey" src="https://github.com/user-attachments/assets/484ebd63-aced-46db-b42e-a8ba3c132aad" />
+
 
 UI simple topology:
 ```text
